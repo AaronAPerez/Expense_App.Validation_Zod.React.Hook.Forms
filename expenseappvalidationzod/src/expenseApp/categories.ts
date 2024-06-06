@@ -1,3 +1,3 @@
-const categories = ['Groceries','Utiilities','Entertainment','Shopping','Other']
+const categories = ['Groceries','Utilities','Entertainment','Shopping','Other']
 
 export default categories

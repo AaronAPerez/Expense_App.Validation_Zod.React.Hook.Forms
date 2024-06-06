@@ -1,17 +1,21 @@
-import { useState } from "react";
+import { Key, useState } from "react";
 import ExpenseFilter from "./expenseApp/components/ExpenseFilter";
 import ExpenseForm from "./expenseApp/components/ExpenseForm";
 import ExpenseList from "./expenseApp/components/ExpenseList";
+// import categories from "./expenseApp/categories";
+
 
 interface Expense {
-  id: number;
+  id: Key;
   description: string;
   amount: number;
   category: string;
 }
 
+
 const App = () => {
-  const [expenses, setExpenses] = useState<Expense[]>([
+
+  const [expenses, setExpenses] = useState([
     { id: 1, description: "aaa- Internet", amount: 70, category: "Bills" },
     { id: 2, description: "bbb- Movie Theater", amount: 25, category: "Entertainment" },
     { id: 3, description: "ccc- Bacon", amount: 20, category: "Food" },
@@ -19,45 +23,45 @@ const App = () => {
     { id: 5, description: "eee- Meat", amount: 60, category: "Groceries" },
   ]);
 
-  const addItem = (data: Expense) => {
-    console.log(data)
-    setExpenses((expenses) => [...expenses, { ...data, id: expenses.length + 1 }]);
+  const addExpense = (data: Expense) => {
+    setExpenses([...expenses, data]);
   };
 
-  const deleteItem = (id: number) => {
-    // Update value of expenses
+  const handleDelete = (id: number) => {
     setExpenses(expenses.filter((expense) => expense.id !== id));
   };
 
-  const filterItem = (category: string) => {
+  const visibleExpense = (category: string) => {
     if (category) {
-      const filterItem = expenses.filter((expense) => expense.category === category);
-      setExpenses(filterItem);
+      const visibleExpenses = expenses.filter((e) => e.category === category);
+      setExpenses(visibleExpenses);
     } else {
       setExpenses([
-        { id: 1, description: "aaa-Internet", amount: 10, category: "Bills" },
-        { id: 2, description: "bbb-Movie Theater", amount: 15, category: "Entertainment" },
-        { id: 3, description: "ccc-Bacon", amount: 20, category: "Food" },
-        { id: 4, description: "ddd-Jeans", amount: 25, category: "Shopping" },
-        { id: 5, description: "eee-Meat", amount: 60, category: "Groceries" },
+        { id: 1, description: "aaa- Internet", amount: 70, category: "Bills" },
+        { id: 2, description: "bbb- Movie Theater", amount: 25, category: "Entertainment" },
+        { id: 3, description: "ccc- Bacon", amount: 20, category: "Food" },
+        { id: 4, description: "ddd- Jeans", amount: 35, category: "Shopping" },
+        { id: 5, description: "eee- Meat", amount: 60, category: "Groceries" },
       ]);
     }
   };
+
+    
 
   return (
     <>
       <h1 className="text-center">Expense Tracker</h1>
 
       <div className="m-5">
-        <ExpenseForm addItem={addItem} />
+        <ExpenseForm addExpense={addExpense} />
       </div>
 
       <div className="m-5">
-        <ExpenseFilter filterItem={filterItem} />
+        <ExpenseFilter onSelectCategory={visibleExpense} />
       </div>
 
       <div className="m-5">
-        <ExpenseList items={expenses} deleteItem={deleteItem} />
+        <ExpenseList expenses={expenses} onDelete={handleDelete} />
       </div>
     </>
   );

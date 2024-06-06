@@ -9,11 +9,11 @@ interface Expense {
 
 interface expenseProps {
   expenses: Expense[];
- DeleteItem: (id: number) => void;
+  onDelete: (id:number) => void;
 }
 
-const ExpenseList = ({ expenses, deleteItem }: expenseProps) => {
-  if (expenses.length === 0) return null;
+const ExpenseList = ({expenses,onDelete}:expenseProps) => {
+  if(expenses.length === 0) return null;
 
   return (
     <>
@@ -30,17 +30,16 @@ const ExpenseList = ({ expenses, deleteItem }: expenseProps) => {
             </thead>
             <tbody>
               {/* Map through items, callback function (item) */}
-              {items.map((item, index) => (
+              {expenses.map((expense, index) => (
                 // key to pass in unique value
-                <tr key={item.id}>
-                  {/* Pass in values */}
-                  <td>{item.description}</td>
-                  <td>${item.amount}</td>
-                  <td>{item.category}</td>
+                <tr key={expense.id}>
+                  <td>{expense.description}</td>
+                  <td>${expense.amount}</td>
+                  <td>{expense.category}</td>
                   <td>
-                  <button
+                    <button
                       className="btn btn-outline-danger"
-                      onClick={() => deleteItem(item.id)}
+                      onClick={() => onDelete(expense.id)}
                     >
                       Delete
                     </button>
@@ -53,17 +52,11 @@ const ExpenseList = ({ expenses, deleteItem }: expenseProps) => {
                 <td>
                   <h2>Total</h2>
                 </td>
-               
                 <td>
                   <h2>
-                     {/* Reduce function sums up least of numbers (amount) in an array */}
-                    {/* takes in 2 perameters total price and current value */}
-                    $
-                    {items
-                      .reduce((total, item) => total + parseInt(item.amount),0)
-                      .toFixed(2)}
+                 ${expenses.reduce((total, expense) => total + expense.amount,0).toFixed(2)}
                   </h2>
-                  </td>
+                </td>
                 <td></td>
                 <td></td>
               </tr>
@@ -72,7 +65,7 @@ const ExpenseList = ({ expenses, deleteItem }: expenseProps) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ExpenseList;
+export default ExpenseList

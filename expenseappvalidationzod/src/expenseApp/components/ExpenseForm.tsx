@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 interface ExpenseFormProps {
-  addExpense: (data: FormData) => void;
+  addExpense: (data: Expense) => void;
 }
 
 const schema = z.object({
