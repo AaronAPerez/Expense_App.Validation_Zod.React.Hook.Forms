@@ -1,29 +1,28 @@
 import categories from "../categories";
 
 interface FilterProps {
-    onSelectCategory: (category: string) => void;
+    visibleExpense: (category: string) => void;
 }
 
 
-const ExpenseFilter = ({onSelectCategory}:FilterProps) => {
+const ExpenseFilter = ({ visibleExpense }: FilterProps) => {
   return (
     <>
-    <h1 className="text-center">Filter</h1>
+      <h1 className="text-center">Filter</h1>
         <select
         name="" 
         id=""
         className="form-select" 
-        onChange={(e) => onSelectCategory(e.target.value)}
+        onChange={(e) => visibleExpense(e.target.value)}
         >
     
       <option value="">All categories</option>
       {categories.map(category => (
         <option key={category} value={category}>
         {category}
-      </option>
+        </option>
       ))}
     </select>
-
     </>
   )
 }

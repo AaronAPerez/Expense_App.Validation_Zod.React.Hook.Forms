@@ -7,18 +7,17 @@ interface Expense {
   category: string;
 }
 
-interface expenseProps {
+interface ExpenseFormProps {
   expenses: Expense[];
   onDelete: (id:number) => void;
 }
 
-const ExpenseList = ({expenses,onDelete}:expenseProps) => {
+const ExpenseList = ({expenses,onDelete}:ExpenseFormProps) => {
   if(expenses.length === 0) return null;
 
   return (
     <>
-      <div className="row">
-        <div className="col">
+      
           <table className="table table-dark table-bordered">
             <thead>
               <tr>
@@ -54,7 +53,7 @@ const ExpenseList = ({expenses,onDelete}:expenseProps) => {
                 </td>
                 <td>
                   <h2>
-                 ${expenses.reduce((total, expense) => total + expense.amount,0).toFixed(2)}
+                 ${expenses.reduce((total, expense) => total + parseInt(expense.amount),0).toFixed(2)}
                   </h2>
                 </td>
                 <td></td>
@@ -62,8 +61,7 @@ const ExpenseList = ({expenses,onDelete}:expenseProps) => {
               </tr>
             </tfoot>
           </table>
-        </div>
-      </div>
+     
     </>
   )
 }
