@@ -19,11 +19,11 @@ const ExpenseList = ({ expenses, onDelete }: ExpenseFormProps) => {
         <div className="table-responsive">
           <table className="table table-bordered border-success">
             <thead>
-              <tr>
-                <th scope="col">Description</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Category</th>
-                <th scope="col"></th>
+              <tr >
+                <th scope="col" className="tableHeadFoot">Description</th>
+                <th scope="col" className="tableHeadFoot">Amount</th>
+                <th scope="col" className="tableHeadFoot">Category</th>
+                <th scope="col" className="tableHeadFoot"></th>
               </tr>
             </thead>
             <tbody>
@@ -48,8 +48,8 @@ const ExpenseList = ({ expenses, onDelete }: ExpenseFormProps) => {
             </tbody>
             <tfoot>
               <tr>
-                <td>Total</td>
-                <td>
+                <td className="tableHeadFoot">Total</td>
+                <td className="tableHeadFoot">
                   $
                   {expenses
                     .reduce(
@@ -58,8 +58,8 @@ const ExpenseList = ({ expenses, onDelete }: ExpenseFormProps) => {
                     )
                     .toFixed(2)}
                 </td>
-                <td></td>
-                <td></td>
+                <td className="tableHeadFoot"></td>
+                <td className="tableHeadFoot"></td>
               </tr>
             </tfoot>
           </table>

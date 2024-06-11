@@ -22,12 +22,14 @@ td{
   font-size: large;
 }
 
-tfoot{
+.tableHeadFoot {
   font-weight: 800;
+  color: #f4f6f2 !important;
+  background-color: #030403 !important;
 }
 
 h1.text-center {
-color: #c4d1bd;
+color: #f4f6f2;
 text-shadow: #0b0e0a;
 font-weight: 700;
 }

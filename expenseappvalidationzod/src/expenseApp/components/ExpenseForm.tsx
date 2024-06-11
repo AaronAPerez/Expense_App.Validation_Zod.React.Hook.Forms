@@ -85,7 +85,7 @@ const ExpenseForm = ({onSubmit}: ExpenseFormProps) => {
         </div>
         <div className="row">
           <div className="col">
-            <button className="btn btn-primary"
+            <button className="btn btn-success"
             type="submit">
               Add Expense 
               <MdFormatListBulletedAdd size={30} />
