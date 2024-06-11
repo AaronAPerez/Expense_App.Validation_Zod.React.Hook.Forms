@@ -48,7 +48,7 @@ const ExpenseList = ({ expenses, onDelete }: ExpenseFormProps) => {
             </tbody>
             <tfoot>
               <tr>
-                <td className="tableHeadFoot">Total</td>
+                <td className="tableHeadFoot">Total Expenses</td>
                 <td className="tableHeadFoot">
                   $
                   {expenses

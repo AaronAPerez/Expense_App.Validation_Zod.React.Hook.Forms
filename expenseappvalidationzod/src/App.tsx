@@ -2,6 +2,7 @@ import { useState } from "react";
 import ExpenseFilter from "./expenseApp/components/ExpenseFilter";
 import ExpenseForm from "./expenseApp/components/ExpenseForm";
 import ExpenseList from "./expenseApp/components/ExpenseList";
+import { FaPiggyBank } from "react-icons/fa";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -21,7 +22,7 @@ const App = () => {
 
   // Function to delete an expense from the expenses state
   const handleDelete = (id: number) => {
-    setExpenses(expenses.filter((expense) => expense.id !== id));
+    setExpenses(expenses.filter(expense => expense.id !== id))
   };
 
 
@@ -29,10 +30,11 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <header className="py-3 mb-2 border-bottom">
-          <h1 className="text-center">EXPENSE TRACKER</h1>
+        <header className="py-2 mb-2 border-bottom">
+          <h1 className="text-center">
+            EXPENSE TR<FaPiggyBank size={57} color="pink"/>CKER</h1>
         </header>
-        <div className="main pt-2">
+        <div className="main">
           <div className="row">
             <div className="col-md-4">
               {/* <h2 className="text-center">New Expense</h2> */}
@@ -45,14 +47,13 @@ const App = () => {
                 }
               />
             </div>
-            
-            <div className="col-md-8 pt-2">
+          <div className="col-md-8 pt-2">
               <ExpenseFilter
-                visibleExpense={(category) => setSelectedCategory(category)}
+              visibleExpense={(category) => setSelectedCategory(category)}
               />
               <ExpenseList expenses={visibleExpenses} onDelete={handleDelete} />
-            </div>
           </div>
+        </div>
         </div>
       </div>
     </>
