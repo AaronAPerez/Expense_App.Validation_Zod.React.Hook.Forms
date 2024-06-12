@@ -2,7 +2,7 @@
 React Expense App Validation  w/Zod and React Hook Forms
 
 <b>Name:</b> Aaron Perez <br>
-<b>Date:</b> ___________ <br>
+<b>Date:</b> 06/11/2024 <br>
 <b>Project Name:</b> Expense App Validation w/zod react hook forms <br>
 React Expense App Validation  w/Zod and React Hook Forms <br>
 <br>
