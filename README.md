@@ -16,4 +16,4 @@ React Expense App Validation  w/Zod and React Hook Forms <br>
 
 <b>Reviewed by:</b> Alicia Spruell<br>
 
-<b>Comments:</b> Validation works great. CSS looks great too!! I love the way the buttons work and the icon you added to the title. I also like the way youre trying to upsatge my designs. This is not over!!! Great job<br>
+<b>Comments:</b> Validation works great. CSS looks great too!! I love the way the buttons work and the icon you added to the title. I also like the way youre trying to upsatge my designs. This is not over!!! Great job :)<br>
