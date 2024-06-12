@@ -14,6 +14,6 @@ React Expense App Validation  w/Zod and React Hook Forms <br>
 
 <b>GitHub:</b> https://github.com/AaronAPerez/Expense_App.Validation_Zod.React.Hook.Forms <br>
 
-<b>Reviewed by:</b> ______________<br>
+<b>Reviewed by:</b> Alicia Spruell<br>
 
-<b>Comments:</b> _______________________________________________________________ <br>
+<b>Comments:</b> Validation works great. CSS looks great too!! I love the way the buttons work and the icon you added to the title. I also like the way youre trying to upsatge my designs. This is not over!!! Great job :)<br>
