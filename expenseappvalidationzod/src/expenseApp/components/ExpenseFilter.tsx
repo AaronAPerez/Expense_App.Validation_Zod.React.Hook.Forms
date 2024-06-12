@@ -7,7 +7,7 @@ interface FilterProps {
 const ExpenseFilter = ({ visibleExpense }: FilterProps) => {
   return (
     <>
-      <div className="container mt-5">
+      <div className="container mt-4">
             <select
               className="form-select"
               onChange={(e) => visibleExpense(e.target.value)}

@@ -28,8 +28,6 @@ td{
 }
 
 .tableHeadFoot {
-  font-weight: 800;
-  font-size: 1rem;;
   color: #f4f6f2 !important;
   background-color: #030403 !important;
 }
@@ -60,37 +58,30 @@ input, .form-select {
 
 
 .wrapper{
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
 }
 
 .link_wrapper{
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-button, input {
- text-shadow: 1px 1px #0b0e0a;
+#addIcon{
+  padding-bottom: 3px;
 }
 
-.btn-outline-danger{
-  font-weight: 500;
-}
 
 .btn-success{
-  padding-left: 1rem;
-  padding-right: 1rem;
   display: block;
-  height: 40px;
+  width: 14rem;
+  height: 2.8rem;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
   color: #fff;
   letter-spacing: 1px;
   border: 3px solid #333;
-  transition: all 0.25s;
-  border-radius: 0;
+  transition: all 0.35s;
 }
 
 .icon{
@@ -102,7 +93,7 @@ button, input {
   right: 0;
   top: 0;
   z-index: -1;
-  transition: all 0.25s;
+  transition: all 0.35s;
 }
 
 .icon svg {
@@ -112,29 +103,27 @@ button, input {
   left: calc(50% - 15px);
   transform: rotate(-45deg);
   fill: #2ecc71;
-  transition: all 0.25s;
+  transition: all 0.35s;
 }
 
-div.icon:hover {
-  border: 3px solid green;
-}
-
-.btn-success:hover{
+.btn-success:hover {
   width: 20rem;
   border: 3px solid #2ecc71;
   background: rgba(0, 114, 0, 0.856);
-  /* color: #2ecc71; */
-  color: #85bb65;
+  color: #2ecc71;
 }
 
 .btn-success:hover + .icon{
   border: 3px solid #0b5a2c;
   right: -25%;
+  background-color: black;
 }
 
 
 .btn-outline-danger {
   color: red;
+  text-shadow: 1px 1px #0b0e0a;
+  font-weight: 500;
   transition: all 0.5s;
   position: relative; 
 }
@@ -145,6 +134,7 @@ div.icon:hover {
   position: absolute;
   width: 100%;
   height: 100%; 
+  background-color: #030403;
 }
 
 .btn-outline-danger::before {
@@ -172,6 +162,7 @@ div.icon:hover {
   border: 1.5px solid rgb(255, 0, 0);
   background-color: rgba(255,255,255,0.1);
 }
+
 
 .btn-outline-danger:hover::before {
   transform: rotate(-45deg);
