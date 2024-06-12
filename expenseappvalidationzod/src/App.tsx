@@ -30,9 +30,9 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <header className="py-2 mb-2 border-bottom">
+        <header className="py-2 border-bottom">
           <h1 className="text-center">
-            EXPENSE TR<FaPiggyBank size={57} color="pink"/>CKER</h1>
+            EXPENSE TR<FaPiggyBank size={59} color="pink"/>CKER</h1>
         </header>
         <div className="main">
           <div className="row">

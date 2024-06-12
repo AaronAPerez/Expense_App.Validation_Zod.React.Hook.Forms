@@ -18,11 +18,10 @@ body {
   padding-right: 0.4rem; */
 }
 
-
 svg{
   padding-bottom: 14px;
-  padding-right: 4px;
-}
+  padding-right: 2px;
+} 
 
 td{
   font-size: large;
@@ -44,13 +43,15 @@ h1.text-center {
 /* color: #f4f6f2; */
 color: #f4f6f2;
 font-size: 3.2rem;
-text-shadow: #0b0e0a;
+text-shadow: 2px 2px #0b0e0a;
 font-weight: 600;
 }
 
 .form-label {
   color: #f4f6f2;
   font-size: large;
+  text-shadow: 2px 2px #0b0e0a;
+  margin-bottom: 4px;
 }
 
 input, .form-select {
@@ -60,8 +61,6 @@ input, .form-select {
 
 .wrapper{
   position: fixed;
-
-  /* transform: translate(-50%, -50%); */
 }
 
 .link_wrapper{
@@ -69,6 +68,14 @@ input, .form-select {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+button, input {
+ text-shadow: 1px 1px #0b0e0a;
+}
+
+.btn-outline-danger{
+  font-weight: 500;
 }
 
 .btn-success{
@@ -80,7 +87,6 @@ input, .form-select {
   text-decoration: none;
   text-align: center;
   color: #fff;
-  text-transform: uppercase;
   letter-spacing: 1px;
   border: 3px solid #333;
   transition: all 0.25s;
@@ -109,11 +115,16 @@ input, .form-select {
   transition: all 0.25s;
 }
 
+div.icon:hover {
+  border: 3px solid green;
+}
+
 .btn-success:hover{
   width: 20rem;
   border: 3px solid #2ecc71;
   background: rgba(0, 114, 0, 0.856);
-  color: #2ecc71;
+  /* color: #2ecc71; */
+  color: #85bb65;
 }
 
 .btn-success:hover + .icon{
@@ -122,19 +133,8 @@ input, .form-select {
 }
 
 
-div[class*=box] {
-  height: 33.33%;
-  width: 100%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
 .btn-outline-danger {
-  color: #c60303;
+  color: red;
   transition: all 0.5s;
   position: relative; 
 }
